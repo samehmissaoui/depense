@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id</th><th>Depense</th> <th>Prix</th> <th>Date </th> </tr>
+    <tbody *ngFor="let depense of depense">
+    <tr >
+    <td>{{depense.Id}}</td>
+    <td>{{depense.depense}}</td>
+    <td>{{depense.prix}}</td>
+    <td>{{depense.date | date:'dd/MM/yyyy'}}</td>
+    <td><a class="btn btn-danger" (click)="supprimerDepense(depense)">Supprimer</a></td>
+    <td><a class="btn btn-success" [routerLink]="['/update',depense.Id]">Modifier</a></td>
+    </tr>
+    </tbody>
+    </table>
+    
+    
+    </div>
+    </div>
+    </div>
